@@ -9,7 +9,7 @@ public class p03_Declaradores_Operadores {
 		c += 73;
 		c = c+1; System.out.print(c);*/
 		
-		final int c=5; // Estamos declarando una constante
+		//final int c=5; // Estamos declarando una constante
 		//c=13; // No podemos modificar una constante
 		
 		final double apulgadas=2.54;
