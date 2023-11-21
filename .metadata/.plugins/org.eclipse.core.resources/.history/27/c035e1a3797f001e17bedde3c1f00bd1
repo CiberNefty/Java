@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Ejercicio13 {
+
+	public static void main(String[] args) {
+		/* Determinar en un conjunto de n numero naturales
+		¿Cuantos son menores que 15?
+		¿Cuantos son mayores que 50?
+		¿Cuantos estan en el rango entre 25 y 45?*/
+		
+		Scanner Teclado = new Scanner(System.in);
+		
+		int n=0, num; // Variables
+		int c = 0, c15=0, c50 = 0, c_rango = 0; // Contadores
+		
+		while(n<100) {
+			System.out.print("Ingresar cantidad de numeros: ");
+			n = Teclado.nextInt();
+		}
+	
+		do {
+			num = n; //Asignamos los valores que ingresamos a num
+			
+			if(num < 15)
+				c15++;
+			if(num > 50)
+				c50+=1;
+			if(num >= 25 && num <=45)
+				c_rango = c_rango + 1;
+			
+			//Contador general
+			c++;
+			
+		}while(c < n);
+		
+		System.out.print("Ingreseo de datos actuales: "+c+"\n");
+		System.out.print("Menores a 15: "+c15+"\n");
+		System.out.print("Mayores a 50: "+c50+"\n");
+		System.out.print("Entre 25 y 45: "+c_rango+"\n");
+		
+
+	}
+
+}

@@ -1,0 +1,27 @@
+
+public class Bucles {
+
+	public static void main(String[] args) {
+		
+		/*/ BUCLE FOR: mostrar por consola los numeros del 1 al 100
+		for(int x=0; x<= 100;x++) {
+			System.out.println("El numero es: "+x);
+		}*/
+		
+		//WHILE
+		// Declaramos una variable y la iniciamos
+		byte numero=1;
+		while(numero >=100){
+			System.out.println("El numero es: "+numero);
+			/* Una vez mostrado el mensaje la variable 
+             * sigue valiendo uno. Por lo tanto hay que
+             * incrementar la variable numero
+             * para que valga 2,3,4, etc. Ya que en caso
+             * de no hacerlo crearíamos un bucle infinito,
+             * asi que la incrementamos.*/
+			numero++;
+		}
+		
+	}
+
+}

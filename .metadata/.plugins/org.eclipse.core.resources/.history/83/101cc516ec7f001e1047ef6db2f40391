@@ -1,0 +1,26 @@
+
+public class WhileContador {
+
+	public static void main(String[] args) {
+
+		int contador = 0;
+		
+		while(contador <5) {
+			contador = contador + 1;
+			System.out.println(contador);
+		}
+		
+		byte o=1;
+		while (o >=100) {
+			System.out.println("El numero es: "+o);
+			/* Una vez mostrado el mensaje la variable 
+             * sigue valiendo uno. Por lo tanto hay que
+             * incrementar la variable numero
+             * para que valga 2,3,4, etc. Ya que en caso
+             * de no hacerlo crearíamos un bucle infinito,
+             * asi que la incrementamos.*/
+			o++;
+		}
+	}
+
+}

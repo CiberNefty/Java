@@ -4,7 +4,12 @@
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-17"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
-	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\Users\danim\Desktop\Proyectos\Java\Pildoras_01"/>
+	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\Users\danim\Desktop\SENA\TRIMESTRE 1\Evaluar Requsitos de la Solucion de Software - (miercoles) presencial - EDWIN MARIN\Ejercicio_11_12_13_Do_While"/>
+	<list key="workingset_selection_history">
+		<item value="Sena_Trimestre1"/>
+		<item value="SENA_Trimestre_1"/>
+		<item value="Pildoras01"/>
+	</list>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -24,5 +29,14 @@
 	<section name="completion_proposal_size">
 	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="630"/>
+		<item key="height" value="400"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="updateSimilarElements" value="true"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
+		<item key="updateTextualMatches" value="false"/>
 	</section>
 </section>
