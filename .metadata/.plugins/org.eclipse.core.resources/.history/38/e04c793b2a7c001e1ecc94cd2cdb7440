@@ -1,0 +1,14 @@
+
+public class Variables {
+
+	public static void main(String[] args) {
+		
+		byte edad=42;
+		edad =23;
+		
+		System.out.print("La edad es: "+edad);
+		
+		
+	}
+
+}

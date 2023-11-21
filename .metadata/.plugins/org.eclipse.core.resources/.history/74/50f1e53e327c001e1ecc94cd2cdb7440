@@ -1,0 +1,21 @@
+import java.awt.im.InputContext;
+
+public class Suma2Valores {
+
+	public static void main(String[] args) {
+		Short num1, num2, suma;
+		
+		System.out.println("SUMAR DOS VALORES:");
+		System.out.println("Ingrese el primer valor: ");
+		num1=12;
+		System.out.println("Ingrese el segundo valor: ");
+		num2=8;
+		suma=num1+num2;
+		
+		System.out.println("La sumatoria es: "+suma);
+		
+		
+
+	}
+
+}
