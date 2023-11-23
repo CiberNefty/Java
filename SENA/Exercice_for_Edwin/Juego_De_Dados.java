@@ -3,11 +3,14 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+import javax.management.StandardEmitterMBean;
+
 public class Juego_De_Dados {
     public static void main(String[] args) {
         System.out.println("JUEGO DE DADOS");
 
         Random random = new Random();
+        Scanner teclado = new Scanner(System.in);
         //iniciarJuego = scanner.toString();
         /* 
         int dado1 = 1;
@@ -27,11 +30,21 @@ public class Juego_De_Dados {
             int getRandom = (int) (Math.random() * (max-min)) + min;
             System.out.println(getRandom);
         }*/
+        /*El conocido juego de dados llamado Craps tiene las
+        siguientes reglas:
+        1.- Si en el primer lanzamiento de los dados sale 7 u 11 el
+        lanzador gana, pero si sale 2 ó 12 pierde.
+        2. Si no salen ninguno de los anteriores números el
+        jugador tiene derecho a hacer tantos lanzamientos
+        hasta que salga el numero se obtuvo por primera vez y
+        con ello gana, pero si sale el número 7 pierde. */
         //Variable para verificar si es la primera ves que se tira
         boolean esPrimertirada = true;
-        int puntopartida=0;
+        int puntopartida=0,numeroJugadas;
+        System.out.println("Ingrese el el numero de lanzadas que quiere hacer");
+        numeroJugadas= teclado.nextInt();
 
-        for (int i = 1; i<6; i++){
+        for (int i = 1; i<numeroJugadas +1; i++){
             System.out.println("PARTIDA: " + i);
             int dado1 = random.nextInt(6) + 1;
             int dado2 = random.nextInt(6) + 1;
@@ -63,19 +76,5 @@ public class Juego_De_Dados {
                 }
             }
         }    
-        
-
-
-
-        
-
-
-
-
-
-
-
-
-
     }
 }
