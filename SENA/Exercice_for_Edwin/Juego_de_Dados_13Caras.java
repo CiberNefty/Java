@@ -60,8 +60,8 @@ public class Juego_de_Dados_13Caras {
                 System.out.println("PARTIDA: " + i);
                 
                 //Imprimir aleaatoriamente un contenido del diccionario
-                System.out.println("\nImprimiendo aleatoriamente un contenido del diccionario:");
-                imprimirContenidoAleatorio(diccionarioDadoValores);
+                //System.out.println("\nImprimiendo aleatoriamente un contenido del diccionario:");
+                //imprimirContenidoAleatorio(diccionarioDadoValores);
 
                 // Imprmimos aleatoriamente el valor del nuestra lista utilizando un metodo
                 System.out.println("\n Imprimiendo aleatoriamente el valor del diccionario:");
@@ -75,6 +75,12 @@ public class Juego_de_Dados_13Caras {
                 System.out.println("carta 1: "+carta1);
                 System.out.println("carta 2: "+carta2);
                 System.out.println("sumatoria de cartas aleatorias: "+sumados);
+
+                if (sumados == 14 || sumados == 20 || sumados == 2 || sumados ==12) {
+                    System.out.println("¡Ganaste!");
+                }else if (sumados == 3 || sumados == 4 || sumados ==5 || sumados ==6 || sumados ==7 || sumados ==8 || sumados ==9 || sumados ==10 || sumados ==11 || sumados ==13 || sumados ==14 || sumados ==15 || sumados ==16 || sumados ==17 || sumados ==17 || sumados ==18 || sumados ==19) {
+                    System.out.println("Nos has cumplido con las normas del juego PERDISTE POR MALO");
+                }
 
 
                 /*int dado1 = aletariedad.nextInt(13) + 1;
@@ -142,7 +148,7 @@ public class Juego_de_Dados_13Caras {
         int valoresAleatorios = (Integer) listaDeValores[ValorAlea.nextInt(listaDeValores.length)];
 
         // Buscamos la llave asociada al valor correspondiente
-        String llavePerteneciente = null;
+        //String llavePerteneciente = null;
         for (Map.Entry<String, Integer> entry: dicvalorAleatorio.entrySet()){
             if (entry.getValue().equals(valoresAleatorios)){
                 llavePerteneciente = entry.getKey();
@@ -150,7 +156,7 @@ public class Juego_de_Dados_13Caras {
             }
         }        
         // Imprimimos la llave aleatorio y el valor asociado
-        System.out.println("valor: "+valoresAleatorios+", llave: "+ llavePerteneciente);
+        //System.out.println("valor: "+valoresAleatorios+", llave: "+ llavePerteneciente);
         return valoresAleatorios;
     }
 }
