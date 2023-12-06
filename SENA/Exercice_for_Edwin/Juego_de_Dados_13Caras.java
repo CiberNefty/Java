@@ -20,9 +20,9 @@ public class Juego_de_Dados_13Caras {
          */
         //Creamos nuestro diccionario de objeto de HashMap
         Map<String, Integer> diccionarioDadoValores = new HashMap<>();
-        Random random = new Random();
+        Random random = new Random(); // Generamos nuestro objto random
         Random aletariedad = new Random();
-        Scanner ingreso = new Scanner(System.in);
+        Scanner ingreso = new Scanner(System.in); // Generamos nuestro objeto Scanner para ingresar texto por teclado
         
         // Creamos una variable boolean donde va a verificar que es la primera partida
         boolean esPrimertirada = true;
@@ -63,6 +63,12 @@ public class Juego_de_Dados_13Caras {
                 System.out.println("\nImprimiendo aleatoriamente un contenido del diccionario:");
                 imprimirContenidoAleatorio(diccionarioDadoValores);
 
+                // Imprmimos aleatoriamente el valor del nuestra lista utilizando un metodo
+                System.out.println("\n Imprimiendo aleatoriamente el valor del diccionario:");
+                imprimirValorAleatorio(diccionarioDadoValores);
+
+                // Asignamos el mismo metodo a dos variables carta 1 y carta 2
+                 
 
                 /*int dado1 = aletariedad.nextInt(13) + 1;
                 int dado2 = aletariedad.nextInt(13) + 1;
@@ -96,7 +102,7 @@ public class Juego_de_Dados_13Caras {
                 System.out.println();
             }
 
-            System.out.print("Si quieres continuar el juego NO PRESIONES EL NUMERO 9: ");
+            System.out.print("¿Quieres continuar el juego? ¡NO! PRESIONES EL NUMERO 9: ");
             finalizacionBucleWhile = ingreso.nextInt();
             System.out.println();
             
@@ -105,16 +111,39 @@ public class Juego_de_Dados_13Caras {
     }
     // Metoo para imrpimir aleatoriamente un contenido del diccionario
     private static void imprimirContenidoAleatorio(Map<String, Integer> diccionarioAleato){
-        Random randomDentro = new Random();
+        Random randomDentro = new Random(); // Creamos otro objeto random para que nos genere elementos al azar
 
         // Obtenemos una lista de las llavves y seleccionamos una al azar
         Object[] listaDeLlaves = diccionarioAleato.keySet().toArray();
 
-        // Guardamos en una variable  nuestra lista de llaves pero dentro utilizamos el random para generar algo aleatorio
+        // Guardamos en una variable en nuestra lista de llaves pero dentro utilizamos el random para generar algo aleatorio
         String llaveAleatoria = (String) listaDeLlaves[randomDentro.nextInt(listaDeLlaves.length)];
 
         // Imprimimos la llave aleatoria y el valor asociado
         System.out.println(llaveAleatoria + ": " + diccionarioAleato.get(llaveAleatoria));
+
+    }
+
+    private static void imprimirValorAleatorio(Map<String, Integer> dicvalorAleatorio){
+        Random ValorAlea = new Random(); // Creamos un random que es el que nos servira para darnos un valor aleatorio
+        
+        //Obtenemos una lista de valores y selecionamos una al azar
+        Object[] listaDeValores = dicvalorAleatorio.values().toArray();
+
+
+        // Guardamos en una variable los valores que obtuvimos de nuestro diccionario y utilizamos un random para que nos genere un valor aleatorio
+        int valoresAleatorios = (Integer) listaDeValores[ValorAlea.nextInt(listaDeValores.length)];
+
+        // Buscamos la llave asociada al valor correspondiente
+        String llavePerteneciente = null;
+        for (Map.Entry<String, Integer> entry: dicvalorAleatorio.entrySet()){
+            if (entry.getValue().equals(valoresAleatorios)){
+                llavePerteneciente = entry.getKey();
+                break;
+            }
+        }        
+        // Imprimimos la llave aleatorio y el valor asociado
+        System.out.println("valor: "+valoresAleatorios+", llave: "+ llavePerteneciente);
 
     }
 }
