@@ -68,7 +68,14 @@ public class Juego_de_Dados_13Caras {
                 imprimirValorAleatorio(diccionarioDadoValores);
 
                 // Asignamos el mismo metodo a dos variables carta 1 y carta 2
-                 
+                int carta1 = imprimirValorAleatorio(diccionarioDadoValores); // Esto me deberia imprimir un valor al azar del diccionario actual
+                int carta2 = imprimirValorAleatorio(diccionarioDadoValores); // Esto me deberia imprimir un valor al azar del diccionario actual
+
+                int sumados = carta1 + carta2;
+                System.out.println("carta 1: "+carta1);
+                System.out.println("carta 2: "+carta2);
+                System.out.println("sumatoria de cartas aleatorias: "+sumados);
+
 
                 /*int dado1 = aletariedad.nextInt(13) + 1;
                 int dado2 = aletariedad.nextInt(13) + 1;
@@ -124,7 +131,7 @@ public class Juego_de_Dados_13Caras {
 
     }
 
-    private static void imprimirValorAleatorio(Map<String, Integer> dicvalorAleatorio){
+    private static int imprimirValorAleatorio(Map<String, Integer> dicvalorAleatorio){
         Random ValorAlea = new Random(); // Creamos un random que es el que nos servira para darnos un valor aleatorio
         
         //Obtenemos una lista de valores y selecionamos una al azar
@@ -144,6 +151,6 @@ public class Juego_de_Dados_13Caras {
         }        
         // Imprimimos la llave aleatorio y el valor asociado
         System.out.println("valor: "+valoresAleatorios+", llave: "+ llavePerteneciente);
-
+        return valoresAleatorios;
     }
 }
