@@ -29,23 +29,23 @@ public class Juego_de_Dados_13Caras {
         int puntopartida = 0, numeroJugadas; // dos variables una para guardar el numero de partidas y la otra va a ser un contador de una sumatoria a evaluar
         
         // Agregamos elementos al nuestro diccionario diccionario(clave, valor)
-        diccionarioDadoValores.put("AA", 11);
-        diccionarioDadoValores.put("A", 1);
-        diccionarioDadoValores.put("2", 2);
-        diccionarioDadoValores.put("3", 3);
-        diccionarioDadoValores.put("4", 4);
-        diccionarioDadoValores.put("5", 5);
-        diccionarioDadoValores.put("6", 6);
-        diccionarioDadoValores.put("7", 7);
-        diccionarioDadoValores.put("8", 8);
-        diccionarioDadoValores.put("9", 9);
-        diccionarioDadoValores.put("10", 10);
-        diccionarioDadoValores.put("J", 10);
-        diccionarioDadoValores.put("Q", 10);
-        diccionarioDadoValores.put("K", 10);
+        diccionarioDadoValores.put("Carta AA", 11);
+        diccionarioDadoValores.put("Carta A", 1);
+        diccionarioDadoValores.put("Carta 2", 2);
+        diccionarioDadoValores.put("Carta 3", 3);
+        diccionarioDadoValores.put("Carta 4", 4);
+        diccionarioDadoValores.put("Carta 5", 5);
+        diccionarioDadoValores.put("Carte 6", 6);
+        diccionarioDadoValores.put("Carta 7", 7);
+        diccionarioDadoValores.put("Carte 8", 8);
+        diccionarioDadoValores.put("Carta 9", 9);
+        diccionarioDadoValores.put("Carta 10", 10);
+        diccionarioDadoValores.put("Carta J", 10);
+        diccionarioDadoValores.put("Carta Q", 10);
+        diccionarioDadoValores.put("Carta K", 10);
 
         System.out.println("JUEGO DE DADOS con 13 caras");
-        System.out.println("-----------------------------");
+        System.out.println("-----------------------------\n");
         
         int finalizacionBucleWhile; //Variable para evaluar la finalizacion del juego
         System.out.print("Si quieres comenzar el juego ¡NO! PRESIONES EL NUMERO 9: ");
@@ -74,44 +74,23 @@ public class Juego_de_Dados_13Caras {
                 int sumados = carta1 + carta2;
                 System.out.println("carta 1: "+carta1);
                 System.out.println("carta 2: "+carta2);
-                System.out.println("sumatoria de cartas aleatorias: "+sumados);
+                System.out.println("\nsumatoria de cartas aleatorias: "+sumados+"");
 
-                if (sumados == 14 || sumados == 20 || sumados == 2 || sumados ==12) {
-                    System.out.println("¡Ganaste!");
-                }else if (sumados == 3 || sumados == 4 || sumados ==5 || sumados ==6 || sumados ==7 || sumados ==8 || sumados ==9 || sumados ==10 || sumados ==11 || sumados ==13 || sumados ==14 || sumados ==15 || sumados ==16 || sumados ==17 || sumados ==17 || sumados ==18 || sumados ==19) {
+                if (sumados == 14){
+                    System.out.println("¡Medio Ganaste con 20 y medio!\n");
+                    break;
+                }else if (sumados == 20 || sumados == 2){
+                    System.out.println("Ganaste\n");
+                    break;
+                }else if(sumados==12){
+                    System.out.println("Cambio de juego");
+                }else if(sumados==3||sumados==4||sumados==5||sumados==6||sumados==7||sumados==8||
+                    sumados==9||sumados==10||sumados==11||sumados==13||sumados==15||
+                    sumados==16||sumados==17||sumados==18||sumados==19){
                     System.out.println("Nos has cumplido con las normas del juego PERDISTE POR MALO");
                 }
 
 
-                /*int dado1 = aletariedad.nextInt(13) + 1;
-                int dado2 = aletariedad.nextInt(13) + 1;
-                System.out.println("Dado #1: " + dado1 + " |----| Dado #2: " + dado2);
-
-                int sumadados = dado1 + dado2;
-                System.out.println("Suma de dados: " + sumadados);
-
-                if (esPrimertirada == true) {
-                    if (sumadados == 7 || sumadados == 11) {
-                        System.out.println("!Has ganado en la primera tirada¡");
-                        break;
-                    } else if (sumadados == 2 || sumadados == 3 || sumadados == 12) {
-                        System.out.println("!Has perdido en la primera tirada¡");
-                        break;
-                    } else {
-                        System.out.println("Se establece un punto en: " + sumadados);
-                        puntopartida = sumadados;
-                        esPrimertirada = false;
-                    }
-                } else {
-                    if (sumadados == puntopartida) {
-                        System.out.println("!Has Ganado!");
-                        break;
-                    } else if (sumadados == 7) {
-                        System.out.println("Esta linea de codigo SI se ejecutara");
-                        System.out.println("!Has Perdido!");
-                        break;
-                    }
-                }*/
                 System.out.println();
             }
 
@@ -148,7 +127,7 @@ public class Juego_de_Dados_13Caras {
         int valoresAleatorios = (Integer) listaDeValores[ValorAlea.nextInt(listaDeValores.length)];
 
         // Buscamos la llave asociada al valor correspondiente
-        //String llavePerteneciente = null;
+        String llavePerteneciente = null;
         for (Map.Entry<String, Integer> entry: dicvalorAleatorio.entrySet()){
             if (entry.getValue().equals(valoresAleatorios)){
                 llavePerteneciente = entry.getKey();
