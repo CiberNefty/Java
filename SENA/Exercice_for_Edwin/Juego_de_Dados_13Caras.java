@@ -89,11 +89,8 @@ public class Juego_de_Dados_13Caras {
                     sumados==16||sumados==17||sumados==18||sumados==19){
                     System.out.println("Nos has cumplido con las normas del juego PERDISTE POR MALO");
                 }
-
-
                 System.out.println();
             }
-
             System.out.print("¿Quieres continuar el juego? ¡NO! PRESIONES EL NUMERO 9: ");
             finalizacionBucleWhile = ingreso.nextInt();
             System.out.println();
